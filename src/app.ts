@@ -51,7 +51,7 @@ app.event('app_mention', async ({ event, context }) => {
         type: 'section',
         text: { type: 'mrkdwn', text: 'おや？テキストの指定が無いですね。' },
       })
-    } else {
+    } else if (engine.isErrorResults(fixResults)) {
       blocks = [
         ...blocks,
         {
@@ -73,13 +73,12 @@ app.event('app_mention', async ({ event, context }) => {
           },
         },
       ]
-    } 
-    // else {
-    //   blocks.push({
-    //     type: 'section',
-    //     text: { type: 'mrkdwn', text: '入力された文書にエラーは見つかりませんでした:+1:' },
-    //   })
-    // }
+    } else {
+      blocks.push({
+        type: 'section',
+        text: { type: 'mrkdwn', text: '入力された文書にエラーは見つかりませんでした:+1:' },
+      })
+    }
 
     app.client.chat.postMessage({
       token: context.botToken,
