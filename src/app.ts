@@ -7,14 +7,14 @@ import formatResults from './utils/formatResults'
 
 type Blocks = (KnownBlock | Block)[]
 
-// アプリの初期化
+// アプリを初期化する
 const app = new App({
   logLevel: LogLevel.DEBUG,
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
 })
 
-// textlintの初期化
+// textlintを初期化する
 const engine = new TextFixEngine({
   configFile: path.join(__dirname, '../.textlintrc.json'),
 })
