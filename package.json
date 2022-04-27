@@ -10,6 +10,7 @@
   },
   "setup": "yarn",
   "scripts": {
+    "start": "node dist/app.js",
     "dev": "run-p dev:*",
     "dev:ts": "tsc --watch",
     "dev:watch": "nodemon --config nodemon.json",
