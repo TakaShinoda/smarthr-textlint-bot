@@ -1,6 +1,6 @@
 {
   "name": "SmartHR Textlint bot",
   "description": "文書校正ができるSlackbot",
-  "repository": "https://github.com/kgsi/smarthr-textlint-bot",
+  "repository": "https://github.com/TakaShinoda/smarthr-textlint-bot",
   "keywords": ["node", "express", "static"]
 }

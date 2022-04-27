@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "文書校正ができるSlackbot",
   "main": "dist/app.js",
-  "homepage": "https://github.com/kufu/smarthr-textlint-bot#readme",
+  "homepage": "https://github.com/TakaShinoda/smarthr-textlint-bot#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kufu/smarthr-textlint-bot.git"
+    "url": "git+https://github.com/TakaShinoda/smarthr-textlint-bot.git"
   },
   "setup": "yarn",
   "scripts": {
