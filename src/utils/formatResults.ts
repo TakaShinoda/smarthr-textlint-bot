@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-concat */
 import { TextlintResult } from '@textlint/kernel'
 
 export default (results: TextlintResult[]) => {
