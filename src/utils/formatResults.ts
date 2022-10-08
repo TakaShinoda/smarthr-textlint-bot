@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-concat */
 import { TextlintResult } from '@textlint/kernel'
 
 export default (results: TextlintResult[]) => {
@@ -13,6 +14,5 @@ export default (results: TextlintResult[]) => {
     }
     output += `[${message.line}:${message.column} ${severity}] ${message.message}\n`
   })
-  // eslint-disable-next-line no-useless-concat
   return '```\n' + `${output}` + '```\n'
 }
