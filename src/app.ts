@@ -1,13 +1,11 @@
-/* eslint-disable sort-imports */
-import { App, LogLevel, KnownBlock, Block } from '@slack/bolt'
+import { App, Block, KnownBlock, LogLevel } from '@slack/bolt'
 import { TextFixEngine } from 'textlint'
 import * as path from 'path'
 require('dotenv').config()
 
 import formatResults from './utils/formatResults'
 
-// eslint-disable-next-line @typescript-eslint/array-type
-type Blocks = (KnownBlock | Block)[]
+type Blocks = Array<KnownBlock | Block>
 
 // アプリの初期化
 const app = new App({
