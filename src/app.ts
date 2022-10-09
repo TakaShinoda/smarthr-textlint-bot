@@ -46,14 +46,12 @@ app.event('app_mention', async ({ event, context }) => {
     const replaceText = event.text.replace(regex, '')
     const fixResults = await engine.executeOnText(replaceText)
 
-    // if (replaceText.length === 0) {
-    //   blocks.push({
-    //     type: 'section',
-    //     text: { type: 'mrkdwn', text: 'おや？テキストの指定が無いですね。' },
-    //   })
-    // } else
-
-    if (engine.isErrorResults(fixResults)) {
+    if (replaceText.length === 0) {
+      blocks.push({
+        type: 'section',
+        text: { type: 'mrkdwn', text: 'おや？テキストの指定が無いですね。' },
+      })
+    } else if (engine.isErrorResults(fixResults)) {
       blocks = [
         ...blocks,
         {
