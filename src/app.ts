@@ -5,7 +5,7 @@ require('dotenv').config()
 
 import formatResults from './utils/formatResults'
 
-type Blocks = Array<KnownBlock | Block>
+type Blocks = (KnownBlock | Block)[]
 
 // アプリの初期化
 const app = new App({
