@@ -10,7 +10,7 @@
   },
   "setup": "yarn",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node --optimize_for_size --max_old_space_size=920 --gc_interval=100 dist/app.js",
     "dev": "run-p dev:*",
     "dev:ts": "tsc --watch",
     "dev:watch": "nodemon --config nodemon.json",
