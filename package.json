@@ -10,7 +10,7 @@
   },
   "setup": "yarn",
   "scripts": {
-    "start": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100 dist/app.js",
+    "start": "node dist/app.js",
     "dev": "run-p dev:*",
     "dev:ts": "tsc --watch",
     "dev:watch": "nodemon --config nodemon.json",
@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "16.x",
+    "node": "17.x",
     "npm": "8.5.2"
   },
   "dependencies": {
