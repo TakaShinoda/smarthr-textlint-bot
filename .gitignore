@@ -69,4 +69,4 @@ dist/
 .DS_Store
 
 # Heroku デプロイで使っていた
-Procfile
+# Procfile
