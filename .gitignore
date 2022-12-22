@@ -67,6 +67,3 @@ typings/
 dist/
 .cache
 .DS_Store
-
-# Heroku デプロイで使っていた
-Procfile
